@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d1a2d;
+  padding: 0 20px;
+}
+.card {
+  background-color: #15273f;
+  max-width: 300px;
+  overflow: hidden;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+.card .img {
+  position: relative;
+  max-width: 250px;
+}
+.card .img img {
+  position: relative;
+  max-width: 250px;
+  border-radius: 8px;
+}
+.card .img .blur {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  background-color: #00fff78f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.card .img img:hover ~ .blur {
+  z-index: 1;
+  pointer-events:none;
+}
+.card .text {
+  border-bottom: 1px solid #6d83a47a;
+  padding: 20px 0;
+}
+.card .text h3 {
+  margin: 0 5px;
+  transition: 0.4s;
+
+  cursor: pointer;
+}
+.card .text h3:hover {
+  color: #00fff8;
+}
+.card .text p {
+  margin: 14px 5px;
+  line-height: 1.6;
+  color: #6d83a4;
+}
+.card .text .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card .text .info > div {
+  display: flex;
+  align-items: center;
+}
+.card .text .info > div > img {
+  width: 18px;
+  margin-right: 6px;
+}
+.card .text .info > div:nth-child(1) > img {
+  width: 12px;
+}
+.card .text .info > div > span {
+  font-weight: bold;
+}
+.card .text .info > div:nth-child(1) > span {
+  color: #00fff8;
+}
+.card .avatar {
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  color: #6d83a4;
+}
+.card .avatar img {
+  width: 45px;
+  margin-right: 12px;
+}
+.card .avatar a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 4px;
+  transition: 0.2s;
+}
+.card .avatar a:hover {
+  color: #00fff8;
+}
+@media (max-width: 350px) {
+  .card img {
+    max-width: 220px;
+  }
+}
